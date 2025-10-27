@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的千万种活法 - 人生模拟游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 页面1：欢迎与角色设定 -->
+    <div id="welcome-page" class="page active">
+        <div class="container">
+            <header class="game-header">
+                <h1>🌟 我的千万种活法 🌟</h1>
+                <p class="subtitle">每个人的人生都是一本未完成的书。在这里，你可以选择如何书写第一章——甚至重写整本书。</p>
+            </header>
+
+            <div class="character-creation">
+                <h2>✨ 创建你的角色</h2>
+                <form id="character-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">👤 名字</label>
+                            <input type="text" id="name" name="name" placeholder="例如：李明">
+                            <button type="button" class="random-btn" data-field="name">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">⚧️ 性别</label>
+                            <select id="gender" name="gender">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                                <option value="其他">其他</option>
+                            </select>
+                            <button type="button" class="random-btn" data-field="gender">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">🎂 年龄 (16-80)</label>
+                            <input type="number" id="age" name="age" min="16" max="80" placeholder="例如：25">
+                            <button type="button" class="random-btn" data-field="age">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profession">💼 专业/职业</label>
+                            <input type="text" id="profession" name="profession" placeholder="例如：医生、学生、程序员">
+                            <button type="button" class="random-btn" data-field="profession">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="personality">🎭 性格</label>
+                            <input type="text" id="personality" name="personality" placeholder="例如：勇敢、悲观、浪漫">
+                            <button type="button" class="random-btn" data-field="personality">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="era">📅 时代背景</label>
+                            <select id="era" name="era">
+                                <option value="古代">古代</option>
+                                <option value="现代" selected>现代</option>
+                                <option value="未来">未来</option>
+                            </select>
+                            <button type="button" class="random-btn" data-field="era">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">🌍 国家/地区</label>
+                            <input type="text" id="location" name="location" placeholder="例如：中国、日本、火星殖民地">
+                            <button type="button" class="random-btn" data-field="location">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dream">🌟 梦想</label>
+                            <input type="text" id="dream" name="dream" placeholder="例如：成为演员、找到真爱">
+                            <button type="button" class="random-btn" data-field="dream">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="marital-status">💑 婚姻状况</label>
+                            <select id="marital-status" name="maritalStatus">
+                                <option value="未婚">未婚</option>
+                                <option value="已婚">已婚</option>
+                                <option value="离异">离异</option>
+                                <option value="丧偶">丧偶</option>
+                            </select>
+                            <button type="button" class="random-btn" data-field="marital-status">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="influencer">👥 影响你的人</label>
+                            <input type="text" id="influencer" name="influencer" placeholder="例如：母亲、导师、孩子">
+                            <button type="button" class="random-btn" data-field="influencer">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mental-state">🧠 当前精神状态</label>
+                            <input type="text" id="mental-state" name="mentalState" placeholder="例如：孤独、希望、焦虑">
+                            <button type="button" class="random-btn" data-field="mental-state">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fear">😨 最大恐惧</label>
+                            <input type="text" id="fear" name="fear" placeholder="例如：失败、孤独、死亡">
+                            <button type="button" class="random-btn" data-field="fear">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="values">💎 价值观</label>
+                            <input type="text" id="values" name="values" placeholder="例如：自由、真实、成功">
+                            <button type="button" class="random-btn" data-field="values">🎲 随机</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="family-background">🏠 家庭背景</label>
+                            <select id="family-background" name="familyBackground">
+                                <option value="富裕">富裕</option>
+                                <option value="中产">中产</option>
+                                <option value="贫困">贫困</option>
+                                <option value="孤儿">孤儿</option>
+                            </select>
+                            <button type="button" class="random-btn" data-field="family-background">🎲 随机</button>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="random-all-btn" class="random-all-btn">🎲 全部随机生成</button>
+                        <button type="submit" class="start-btn">🚀 开始人生</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面2：角色与世界生成 -->
+    <div id="generation-page" class="page">
+        <div class="container">
+            <h2>🎭 正在生成你的世界...</h2>
+            <div class="loading-spinner"></div>
+            <div id="generated-content" class="generated-content" style="display: none;">
+                <div class="character-profile">
+                    <h3>👤 你的角色</h3>
+                    <div class="character-card">
+                        <div class="character-avatar" id="character-avatar">
+                            <!-- AI生成的头像将在这里显示 -->
+                        </div>
+                        <div class="character-info" id="character-info">
+                            <!-- 角色信息将在这里显示 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="npc-section">
+                    <h3>👥 你生命中的人</h3>
+                    <div class="npc-grid" id="npc-grid">
+                        <!-- NPC将在这里生成 -->
+                    </div>
+                </div>
+
+                <div class="initial-event">
+                    <h3>📖 故事开始</h3>
+                    <div class="event-text" id="event-text">
+                        <!-- 初始事件文本将在这里显示 -->
+                    </div>
+                </div>
+
+                <button id="start-story-btn" class="continue-btn">📚 开始故事</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面3：故事推进 -->
+    <div id="story-page" class="page">
+        <div class="container">
+            <header class="story-header">
+                <h2>📖 你的人生故事</h2>
+                <div class="character-summary" id="character-summary">
+                    <!-- 角色简要信息 -->
+                </div>
+            </header>
+
+            <div class="story-content">
+                <div class="story-text" id="story-text">
+                    <!-- 故事文本将在这里显示 -->
+                </div>
+
+                <div class="choice-section" id="choice-section" style="display: none;">
+                    <h3>🤔 你的选择</h3>
+                    <div class="choices" id="choices">
+                        <!-- 选择选项将在这里显示 -->
+                    </div>
+
+                    <div class="reason-section">
+                        <label for="choice-reason">📝 解释你的选择原因（至少10字）：</label>
+                        <textarea id="choice-reason" placeholder="请输入你选择的原因..." rows="3" required></textarea>
+                        <button id="submit-choice" class="submit-btn">✅ 提交选择</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ending-section" id="ending-section" style="display: none;">
+                <!-- 结局内容将在这里显示 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
