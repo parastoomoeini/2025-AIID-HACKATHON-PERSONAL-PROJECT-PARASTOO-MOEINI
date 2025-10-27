@@ -6,7 +6,7 @@ A text-based AI storytelling game that lets users create a character, make moral
 An AI-powered interactive life simulation game where your choices shape your destiny across different worlds and lifetimes. Experience life, death, rebirth, and see how your decisions affect your dreams, relationships, and personal growth.
 
 ## Live Demo
-[Insert your deployed project URL here]
+https://liferebirth.zeabur.app/
 
 ## Key Features
 - Create your own character:
