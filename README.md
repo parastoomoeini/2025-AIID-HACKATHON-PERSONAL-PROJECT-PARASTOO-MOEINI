@@ -39,11 +39,3 @@ An AI-powered interactive life simulation game where your choices shape your des
 3. Create your character by entering details and making choices
 4. Read the AI-generated story and make decisions as prompted
 5. Observe the consequences of your actions and decide whether to rebirth or continue
-
-## Future Improvements
-- Add more life events, challenges, and endings
-- Improve AI illustrations for characters and environments
-- Support multiplayer or shared story experiences
-
-## License
-MIT License
